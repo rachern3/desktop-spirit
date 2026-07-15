@@ -151,3 +151,6 @@ dist-app/
 *.key
 *.p12
 *.mobileprovision
+
+# Local-only project notes and process documents
+docs/

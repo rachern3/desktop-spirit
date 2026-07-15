@@ -72,7 +72,6 @@ src/Spirit3D.jsx                       Three.js、动画、注视和晶翼
 src/styles.css                         视觉样式
 integrations/desktop-spirit-bridge/    Codex Hooks 插件
 test/                                  窗口状态测试
-docs/                                  检查点、SOP 和 3D 要求
 ```
 
 ## 本地 Codex
@@ -87,12 +86,6 @@ Codex 进度桥插件将最小任务状态原子写入：
 
 桌宠不会读取完整任务 transcript。安装或更新 Hook 后，请在新的 Codex 任务中检查并信任桌面精灵进度桥。
 
-## 文档
-
-- [当前开发检查点](docs/PROJECT-CHECKPOINT-v0.5.2.md)
-- [小白实操版：如何用 Codex 从 0 做出 3D 桌面精灵](docs/SOP-Codex-3D-Desktop-Spirit.md)
-- [3D 模型接入要求](docs/3d-model-requirements.md)
-
 ## 当前限制
 
 - 尚无完整表情 BlendShape、眨眼和口型。
@@ -101,4 +94,4 @@ Codex 进度桥插件将最小任务状态原子写入：
 - Codex 进度百分比是 Hooks 事件估算。
 - 当前仅提供 arm64 未签名开发包；公开分发仍需签名和公证。
 
-后续继续开发前，请先阅读检查点并运行 `npm run check`。
+后续继续开发前，请先运行 `npm run check`。
