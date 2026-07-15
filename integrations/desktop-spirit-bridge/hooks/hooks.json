@@ -1,0 +1,77 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/usr/bin/env node \"$PLUGIN_ROOT/scripts/report-progress.cjs\"",
+            "timeout": 10,
+            "statusMessage": "连接桌面精灵"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/usr/bin/env node \"$PLUGIN_ROOT/scripts/report-progress.cjs\"",
+            "timeout": 10,
+            "statusMessage": "通知桌面精灵：任务开始"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/usr/bin/env node \"$PLUGIN_ROOT/scripts/report-progress.cjs\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/usr/bin/env node \"$PLUGIN_ROOT/scripts/report-progress.cjs\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/usr/bin/env node \"$PLUGIN_ROOT/scripts/report-progress.cjs\"",
+            "timeout": 10,
+            "statusMessage": "通知桌面精灵：等待确认"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/usr/bin/env node \"$PLUGIN_ROOT/scripts/report-progress.cjs\"",
+            "timeout": 10,
+            "statusMessage": "通知桌面精灵：任务完成"
+          }
+        ]
+      }
+    ]
+  }
+}

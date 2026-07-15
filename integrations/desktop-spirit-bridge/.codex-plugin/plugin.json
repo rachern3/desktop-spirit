@@ -1,0 +1,17 @@
+{
+  "name": "desktop-spirit-bridge",
+  "version": "0.1.0",
+  "description": "Send local Codex task lifecycle progress to the Desktop Spirit companion.",
+  "author": {
+    "name": "Local developer"
+  },
+  "interface": {
+    "displayName": "桌面精灵进度桥",
+    "shortDescription": "把 Codex 任务进度发送给本地桌宠。",
+    "longDescription": "通过本地生命周期 Hooks 将任务开始、工具执行、等待授权和完成状态写入桌面精灵读取的状态文件；不会上传对话或执行额外网络请求。",
+    "developerName": "Local developer",
+    "category": "Productivity",
+    "capabilities": ["Automation"],
+    "defaultPrompt": ["检查桌面精灵进度桥是否正常工作。"]
+  }
+}

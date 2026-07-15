@@ -141,3 +141,13 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# Desktop Spirit build output and local macOS files
+dist-app/
+.DS_Store
+
+# Local certificates and signing credentials
+*.pem
+*.key
+*.p12
+*.mobileprovision

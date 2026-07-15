@@ -1,0 +1,56 @@
+{
+  "name": "desktop-spirit-mvp",
+  "version": "0.5.2",
+  "private": true,
+  "description": "A transparent desktop companion MVP for macOS.",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev:web": "vite --host 127.0.0.1 --port 4311",
+    "build": "vite build",
+    "start": "npm run build && electron .",
+    "package:mac": "npm run build && electron-builder --mac dir --arm64",
+    "test": "node --test test/*.test.cjs",
+    "check": "node --check electron/main.cjs && node --check electron/preload.cjs && node --check electron/window-state.cjs && npm test && vite build"
+  },
+  "dependencies": {
+    "lucide-react": "1.24.0",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "6.0.3",
+    "electron": "43.1.0",
+    "electron-builder": "26.15.3",
+    "vite": "8.1.4"
+  },
+  "build": {
+    "appId": "com.codex.desktopspirit",
+    "productName": "桌面精灵",
+    "asar": true,
+    "directories": {
+      "output": "dist-app"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "assets/trayTemplate.png",
+      "assets/trayTemplate@2x.png",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.utilities",
+      "icon": "build/icon.icns",
+      "target": [
+        {
+          "target": "dir",
+          "arch": [
+            "arm64"
+          ]
+        }
+      ],
+      "hardenedRuntime": false,
+      "gatekeeperAssess": false
+    }
+  }
+}
